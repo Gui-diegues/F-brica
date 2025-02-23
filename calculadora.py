@@ -1,14 +1,27 @@
-import math
-n1 = float(input('Digite um número:'))
-n2 = input('Digite a operação:')
-operacao = float(input('Digite outro número'))
+class calculadora():
+  
+  while True:
+    n1 = float(input("Digite um número: "))
+    op = input("Digite um operador mtemático: ")
+    n2 = float(input("Digite outro número: "))
 
-if operacao == 'somar':
-    resultado = n1 + n2
-else operacao == 'subitrair':
-    resultado = n1 - n2
-else operacao == 'dividir'
-    resultado = n1 / n2
-else operacao == 'multiplicar'
-    resultado == n1 * n2
-print({} {} {} é igual igual a: {}.format n1, n2, operacao, resultado)
+    if op == '+':
+        resultado = n1 + n2
+        print(f"{n1} {op} {n2} = {resultado}")
+        
+    elif op == '-':
+        resultado = n1 - n2
+        print(f"{n1} {op} {n2} = {resultado}")
+        
+    elif op == '/':
+        resultado = n1 / n2
+        print(f"{n1} {op} {n2} = {resultado:}")
+
+    elif op == '*':
+        resultado = n1 * n2
+        print(f"{n1} {op} {n2} = {resultado:}")
+    else:
+        print("Por favor, digite um operador válido.")
+        break
+    
+calculadora()
